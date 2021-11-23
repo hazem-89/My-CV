@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root {
-    --header-height: 3.1rem;
+    --header-height: 7rem;
     --dark-mode-text-color: #f1f1f1;
     --dark-mode-background-color: rgb(38, 38, 41);
     --light-mode-text-color: rgb(38, 38, 41);
@@ -19,7 +19,7 @@ body{
 a{
     text-decoration: none;
 }
-header{
+.header{
     position: fixed;
     top: 0em;
     right: 0;
@@ -28,9 +28,8 @@ header{
     display: block;
     width: 100%;
     height: var(--header-height);
-    background-color: rgb(38, 38, 41);
-    backdrop-filter: blur(2rem);
-    opacity: .8;
+    background: var(--dark-mode-background-color);
+    opacity: .97;
 }
 .nav-list{
     background: var(--dark-mode-background-color);
@@ -43,6 +42,7 @@ header{
     visibility: hidden;
     opacity: 0;
     transition: opacity 3s;
+
 }
 .nav-list > a {
     padding-top: 1em;
@@ -68,10 +68,14 @@ header{
     justify-content: space-between;
 }
 .mobile-menu .name-logo{
-    font-size: 15px;
     color: var(--dark-mode-text-color);
     margin-right: 1em;
-    font-family: 'Comforter Brush', cursive;
+    font-family: 'Estonia', cursive;    
+    font-weight: bolder;
+}
+.name-logo > h5{
+    font-size: 2em;
+    font-weight: bolder;
 }
 .mobile-menu > i {
     color: var(--dark-mode-text-color);
@@ -81,14 +85,11 @@ header{
     transition: transform 1s .1s cubic-bezier(0.04, 0.04, 0.12, 0.96);;
 }
 .fa-chevron-circle-down{
-    color: f1f1f1;
+    color: #f1f1f1;
 }
-.contact-icon{
-    margin-top: 300px
-}
-
-header .active {
+.header .active {
     width: 100%;
+    background-color: var(--dark-mode-background-color);
 }
 .active .nav-list{
     visibility: visible;
@@ -121,20 +122,84 @@ header .active {
 .slider .show {
     opacity: 1;
 }
-
-
 .name{
     height: auto;
     text-align: center;
-    width: 80%;
-    margin: 44em  auto 0 auto;
+    width: 60%;
+    margin: 50em  auto 0 auto;
     background-color:var(--dark-mode-background-color);
     font-size: .5em;
     border-radius:  360px 360px 0 0;
     padding-top: 5em;
-
+    font-family: 'Comforter Brush', cursive;
 }
-
-.name .h1{
-    padding-top: 1em;
+.intro{
+    width: 80%;
+    margin: 4em auto 0 auto;
+}
+.main{
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    margin: auto;
+    height: 100vh;
+    border-bottom: solid .1em #f1f1f186;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.intro button{
+    border-radius: 5em;
+    width: 200px;
+    color: var(--dark-mode-text-color);
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 1px;
+}
+.buttons > a > i{
+    font-size: 2rem;
+    padding-left: .3em;
+    color: var(--dark-mode-text-color);
+}
+.about-me{
+    padding-top: 3em;
+    width: 100%;
+    margin: auto;
+    border-bottom: solid .1em #f1f1f186;
+}
+.text{
+    width: 80%;
+    margin: auto;
+}   
+.text > p{
+    padding-top: 2em;
+}
+.text > h1{
+    text-align: center;
+}
+.info-list{
+    list-style: none;
+    line-height: 2em;
+    font-weight: bold;
+    font-size: .9em;
+}
+.info-item > span{
+    color: aqua
+}
+.info-item .column-2{
+    margin-left: 1em;
+    color: var(--dark-mode-text-color)
+}
+.contact-icon{
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-icon > i{
+    padding: .2em;
+}
+.contact-icon > i:hover{
+    transform: scale(1.5);
 }

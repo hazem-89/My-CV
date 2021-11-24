@@ -7,6 +7,7 @@ function main() {
     toggleMenu();
     startSlider();
     changeNavBackgroundColor()
+    loopOverTexts()
 }
 
 /** show and hide nav item */
@@ -56,4 +57,53 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
 
 sectionOneObserver.observe(sectionOne)
 
+}
+
+
+// typewriter effect
+
+const textDisplay = document.getElementById('text');
+const texts = ['Welcome to my cv.', 'i am a web developer', 'and i love coding.',];
+let i = 0;
+let j = 0;
+let currentText = [];
+isDeleting = false;
+isEnd = false;
+
+function loopOverTexts() {
+    isEnd = false;
+    textDisplay.innerHTML = currentText.join('');
+
+    if (i < texts.length) {
+        
+    if (!isDeleting && j <= texts[i].length) {
+        currentText.push(texts[i][j])
+        j++
+        textDisplay.innerHTML = currentText.join('');
+
+    }
+    if (isDeleting && j <= texts[i].length) {
+        currentText.pop(texts[i][j])
+        j--
+        textDisplay.innerHTML = currentText.join('');
+    }
+    if (j ==  texts[i].length) {
+        isEnd = true;
+        isDeleting = true;
+    }
+
+    if (isDeleting && j === 0) {
+        currentText = [];
+        isDeleting = false;
+        i++
+        if (i == texts.length) {
+            i = 0; 
+        }
+    }
+    
+  }
+    const speedUp = Math.random() * (80 -50) + 50;
+    const normalSpeed = Math.random() * (200 - 100) + 100;
+    const time = isEnd ? 1000 : isDeleting ? speedUp : normalSpeed
+    setTimeout(loopOverTexts, time)
 }

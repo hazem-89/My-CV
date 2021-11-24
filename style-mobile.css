@@ -138,6 +138,12 @@ a{
     width: 80%;
     margin: 4em auto 0 auto;
 }
+.typewriter-effect{
+    height: 100px;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: rgb(31, 181, 201);
+}
 .main{
     text-align: center;
     font-size: 14px;

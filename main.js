@@ -6,8 +6,9 @@ let activeImageIndex = 0;
 function main() {
     toggleMenu();
     startSlider();
-    changeNavBackgroundColor()
-    loopOverTexts()
+    changeNavBackgroundColor();
+    loopOverTexts();
+
 }
 
 /** show and hide nav item */
@@ -61,7 +62,7 @@ sectionOneObserver.observe(sectionOne)
 
 
 // typewriter effect
-
+function loopOverTexts() {
 const textDisplay = document.getElementById('text');
 const texts = ['Welcome to my cv.', 'i am a web developer', 'and i love coding.',];
 let i = 0;
@@ -70,7 +71,7 @@ let currentText = [];
 isDeleting = false;
 isEnd = false;
 
-function loopOverTexts() {
+
     isEnd = false;
     textDisplay.innerHTML = currentText.join('');
 
@@ -107,3 +108,18 @@ function loopOverTexts() {
     const time = isEnd ? 1000 : isDeleting ? speedUp : normalSpeed
     setTimeout(loopOverTexts, time)
 }
+
+// slide between experience sections
+// function SlideToNextSlide() {
+// const slider = document.querySelector('.slider-2');
+// const leftArrow = document.querySelector('.fa-chevron-circle-left');
+// const rightArrow = document.querySelector('.fa-chevron-circle-right');
+// let sectionsIndex = 0;
+
+// leftArrow.addEventListener('click', function(){
+//     sectionsIndex = (sectionsIndex > 0) ? sectionsIndex - 1 : 0;
+//     slider.style.transform = 'translate(' + (sectionsIndex) * -25 + '%)'
+// })
+
+// }
+// SlideToNextSlide()

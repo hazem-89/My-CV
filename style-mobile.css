@@ -9,12 +9,17 @@
     --dark-mode-background-color: rgb(38, 38, 41);
     --light-mode-text-color: rgb(38, 38, 41);
     --light-mode-background-color: #f1f1f1;
+    --dark-mod-seconder-text-color: rgb(11, 255, 255);
 
 }
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
 body{
     background-color: var(--dark-mode-background-color);
     color: var(--dark-mode-text-color);
-    height: 2000px;
+    font-size: 16px;
+    height: 5000px;
 }
 a{
     text-decoration: none;
@@ -192,7 +197,7 @@ a{
     font-size: .9em;
 }
 .info-item > span{
-    color: aqua
+    color: var(--dark-mod-seconder-text-color);
 }
 .info-item .column-2{
     margin-left: 1em;
@@ -209,6 +214,67 @@ a{
 }
 .contact-icon > i:hover{
     transform: scale(1.5);
+}
+
+.resume{
+    width: 100%;
+    margin:  auto;
+    padding: 3em 0;
+    /* border-bottom: solid 1px var(--light-mode-background-color); */
+}
+.main-title{
+    text-align: center;
+}
+.main-title > h3{
+    font-size: 1em;
+    color: var(--dark-mod-seconder-text-color);
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.carousel{
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border: solid 1px var(--light-mode-background-color);
+}
+.slider-2{
+    height: 100%;
+    display: flex;
+    width: 500%;
+}
+.slider-2 > section{
+    flex-basis: 100%;
+}
+
+.experience-info{
+    padding: 1em 0;
+}
+.experience-info > h1, p {
+    line-height: .9em;
+    font-size: 1em;
+}
+.experience-info > h1{
+    font-weight: bold;
+}
+.experience-info > h1 span {
+    color: var(--dark-mod-seconder-text-color);
+}
+.experiences-control{
+    display: flex;
+    padding-top: 1em;
+    justify-content: center;
+    font-size: 3em;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.experiences-control .fas{
+    margin: .5em;
+    border: solid 1px var(--light-mode-background-color);
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 320px) {

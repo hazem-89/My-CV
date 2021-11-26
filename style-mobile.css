@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* roots for styling  */
 :root {
     --header-height: 7rem;
     --dark-mode-text-color: #f1f1f1;
@@ -20,6 +22,7 @@ body{
 a{
     text-decoration: none;
 }
+/* General buttons styling */
 button { 
     height: 50px;
     width: 150px;
@@ -28,6 +31,8 @@ button {
     font-weight: bold;
     border-radius: 1em;
 }
+
+/* header styles  */
 header{
     position: fixed;
     top: 0em;
@@ -46,6 +51,8 @@ header{
 .nav-container{
     height: var(--header-height);
 }
+
+/* nav list content Style */
 .nav-list{
     background: var(--dark-mode-background-color);
     display: flex;
@@ -71,9 +78,9 @@ header{
 button:hover{
     
 }
+/* mobile styling */
 .mobile-menu{
     z-index: 1500;
-    cursor: pointer;
     color: var(--dark-mode-background-color);
     max-width: 100%;
     height: var(--header-height);
@@ -81,6 +88,8 @@ button:hover{
     align-items: center;
     justify-content: space-between;
 }
+
+/* mobile ban logo-name */
 .mobile-menu .name-logo > h5 {
     color: var(--dark-mode-text-color);
     margin-right: 1em;
@@ -92,6 +101,8 @@ button:hover{
 .mobile-menu .name-logo > h5 > span {
     padding-left: 1em;
 }
+
+/* mobile menu-icon */
 .mobile-menu > i {
     color: var(--light-mode-text-color);
     background-color: var(--light-mode-background-color);
@@ -100,16 +111,21 @@ button:hover{
     transform: rotate(0deg);
     margin-left: 1em;
     transition: transform 1s .1s cubic-bezier(0.04, 0.04, 0.12, 0.96);;
+    cursor: pointer;
 }
+
+/* Active style for the van "onClick button" */
 .active .nav-list {
     visibility: visible;
     height: 100vh;
     opacity: 1;
 }
+/* mobile menu icon rotation */
 .active .mobile-menu > i {
     transform: rotate(180deg);
     transition: transform 1s .1s cubic-bezier(0.04, 0.04, 0.12, 0.96);;
 }
+/* Animation nav list for mobile  */
 .active .nav-list .nav-item{
     animation: fadeIn .5s ease-in; 
 }
@@ -117,9 +133,15 @@ button:hover{
     from { opacity:0 };
     to   { opacity:1 };
 }
+
+/* changing the header background color on scroll */
 .nav-scrolled {
     background-color: var(--dark-mode-background-color);
 }
+
+/* page-intro Slider */
+
+/* slide-image style */
 .slider, .slider > img {
     width: 100%;
     height: 75%;
@@ -135,6 +157,8 @@ button:hover{
 .slider .show {
     opacity: 1;
 }
+
+/* main-intro styling */
 .main {
     text-align: center;
     font-size: 14px;
@@ -158,12 +182,15 @@ button:hover{
     width: 90%;
     margin: 3em auto 0 auto;
 }
+
+/* styling for the typewriter  */
 .typewriter-effect {
     height: 50px;
     text-transform: uppercase;
     font-size: 1em;
     color: rgb(31, 181, 201);
 }
+/* Intro-main buttons */
 .buttons {
     display: flex;
     align-items: center;
@@ -181,6 +208,8 @@ button:hover{
     padding-left: .3em;
     color: var(--dark-mode-text-color);
 }
+
+/* styling for About-me styling  */
 .about-me {
     padding-top: 3em;
     width: 100%;
@@ -197,6 +226,7 @@ button:hover{
 .about-me-text > h1 {
     text-align: center;
 }
+/* about me list style */
 .info-list {
     padding-top: 1em;
     list-style: none;
@@ -211,6 +241,7 @@ button:hover{
     margin-left: 1em;
     color: var(--dark-mode-text-color)
 }
+/* social icons styling */
 .contact-icon{
     margin-top: 1em;
     font-size: 2em;
@@ -225,6 +256,7 @@ button:hover{
     transform: scale(1.5);
 }
 
+/* Resume "experiences" style */
 .resume{
     width: 90%;
     margin:  0 auto;
@@ -238,11 +270,12 @@ button:hover{
     color: var(--dark-mod-seconder-text-color);
     padding-top: .5em;
 }
-.container{
-    width: 90%;
-    margin:  0 auto;
-    border-bottom: solid 1px var(--light-mode-background-color);
 
+/* job-education slider style */
+.slid-container{
+    width: 100%;
+    margin:  0 1em;
+    border-bottom: solid 1px var(--light-mode-background-color);
 }
 .carousel{
     height: 300px;
@@ -258,14 +291,14 @@ button:hover{
 .slider-2 section {
     flex-basis: 100%;
     justify-content: center;
-    align-items: ;
     margin-top: 2em;
     display: flex;
 }
 
+/* job-education slider buttons */
 .left, .right {
     position: absolute;
-    top: 70%;
+    top: 60%;
     transform: translate(-50%);
     cursor: pointer;
     display: flex;
@@ -288,6 +321,9 @@ button:hover{
 .right{ 
     right: 20%;
 }
+
+/* job-education slider info */
+
 .experience-info{
     padding: .2em ;
     min-width: 45%;
@@ -303,7 +339,134 @@ button:hover{
 }
 
 
+.mh-skills-inner  {
+    border-bottom: solid 1px var(--light-mode-background-color);
+    padding: 3em 0;
+}
+.mh-skills-2{
+    border-bottom: solid 1px var(--light-mode-background-color);
+    padding: 3em 0;
+}
+.mh-skills .mh-professional-skills{
+    padding-right: 60px;
+    margin-top: 2em;
+}
+.mh-skills .mh-professional-skills h3 {
+    font-size:30px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+.mh-professional-skills{
+    padding-left: 20%;
 
+}
+.mh-professional-skills h3 {
+    font-size:30px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+.mh-professional-progress li {
+    display: inline-block;
+    margin: 0 auto;
+    float: none;
+    width: 48%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.mh-progress {
+    margin-bottom: 10px;
+    font: 900 1.14285/1;
+}
+.mh-progress .progressbar-text {
+    color: inherit !important;
+    font-family: 'poppins', sans-serif;
+
+}
+.progress.progress-line {
+    height: 10px;
+    margin-right: 60px;
+}
+
+.progress.progress-line .progressbar-text {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 60px;
+    transform: translateY(-35%);
+    text-align: center;
+    font-family: 'poppins', sans-serif;
+}
+.mh-progress.mh-progress-circle {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+.mh-progress path:nth-child(1) {
+    stroke: var(--light-mode-background-color);
+}
+.mh-progress path:nth-child(2) {
+    stroke: var(--dark-mod-seconder-text-color)!important;
+}
+
+.candidates{
+    position: relative;
+    margin-bottom: 15px;
+    font-family: 'poppins', sans-serif;
+}
+.candidates .parcial{
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+}
+.candidates .parcial .info{
+    position: relative;
+    font-family: 'poppins', sans-serif;
+}
+.candidates .parcial .info .name{
+    font-size: 15px;
+    font-weight: 600;
+    opacity: .9;
+    font-family: 'poppins', sans-serif;
+}
+.candidates .parcial .info .percentage-num{
+    font-size: 15px;
+    font-weight: normal;
+    float: right;
+}
+.candidates .parcial .progressBar {
+    position: relative;
+    width: 100%;
+    height: 7px;
+    margin: 20px 0 2px;
+    border-radius: 10px;
+    background-color:var(--light-mode-background-color);
+}
+.candidates .percentage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 7px;
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+    background-color: var(--dark-mod-seconder-text-color);
+    -webkit-transition: 3s all;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-name: animationProgress;
+    font-family: 'poppins', sans-serif;
+} 
+
+@keyframes animationProgress {
+    from{ 
+        width: 0;
+    }
+}
 @media screen and (max-width: 320px) {
     .slider, .slider > img{
         width: 100%;

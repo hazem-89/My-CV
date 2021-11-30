@@ -23,17 +23,20 @@ a{
     text-decoration: none;
 }
 /* General buttons styling */
-button { 
+button  { 
     height: 50px;
     width: 150px;
     color: var(--light-mode-text-color);
     background-color:var(--light-mode-background-color);
     font-weight: bold;
     border-radius: 1em;
+    border: none;
+    transition: all 1s ease;
+    border-radius: 5em;
 }
 
 /* header styles  */
-header{
+.header{
     position: fixed;
     top: 0em;
     right: 0;
@@ -43,27 +46,26 @@ header{
     width: 100%;
     height: var(--header-height);
     backdrop-filter: blur(.3em);
-
 }
-.active header {
-    background: var(--light-mode-background-color);
+.active .header {
+    background: var(--dark-mode-background-color);
+    backdrop-filter: blur(0em);
+
 }
 .nav-container{
     height: var(--header-height);
 }
-
 /* nav list content Style */
 .nav-list{
     background: var(--dark-mode-background-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     backdrop-filter: blur(5rem);
     visibility: hidden;
     opacity: 0;
     transition: opacity 3s;
-    padding-bottom: 5em;
+    padding-top: 5em;
     height: var(--header-height);
 }
 .nav-list > a {
@@ -76,9 +78,10 @@ header{
     margin-top: 1em;
 }
 button:hover{
-    
+    color: var(--dark-mod-seconder-text-color);
+    transform: scale(1.1);
 }
-/* mobile styling */
+/* mobile menu styling */
 .mobile-menu{
     z-index: 1500;
     color: var(--dark-mode-background-color);
@@ -95,8 +98,9 @@ button:hover{
     margin-right: 1em;
     font-family: 'Estonia', cursive;    
     font-weight: bolder;
-    font-size: 1.5em;
+    font-size: 3em;
     font-weight: bolder;
+    line-height: 0.6em;
 }
 .mobile-menu .name-logo > h5 > span {
     padding-left: 1em;
@@ -164,7 +168,7 @@ button:hover{
     font-size: 14px;
     width: 100%;
     margin: auto;
-    height: 500px;
+    height: 400px;
     border-bottom: solid .1em #f1f1f186;
     margin-top: 30em;
 }
@@ -173,58 +177,60 @@ button:hover{
     width: 60%;
     margin: auto;
     background-color:var(--dark-mode-background-color);
-    font-size: 30px;
+    font-size:  3em;
     border-radius:  360px 360px 0 0;
-    font-family: 'Comforter Brush', cursive;
-    padding-top: 2em;
+    font-family: 'Estonia', cursive;    
+    padding-top: 1em;
+    line-height: 1em;
+    min-height: 4em;
 }
 .intro {
     width: 90%;
-    margin: 3em auto 0 auto;
+    margin: 1em auto 0 auto;
 }
 
 /* styling for the typewriter  */
 .typewriter-effect {
-    height: 50px;
+    height: 30px;
     text-transform: uppercase;
     font-size: 1em;
-    color: rgb(31, 181, 201);
+    color: var(--dark-mod-seconder-text-color);
 }
 /* Intro-main buttons */
 .buttons {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 7em;
+    margin-top: 5em;
 }
 .intro button {
-    border-radius: 5em;
+  
     width: 200px;
-    font-family: 'Courier New', Courier, monospace;
     letter-spacing: 1px;
 }
 .buttons > a > i {
-    font-size: 2rem;
-    padding-left: .3em;
+    font-size: 3rem;
+    padding-left: .4em;
     color: var(--dark-mode-text-color);
 }
 
 /* styling for About-me styling  */
 .about-me {
-    padding-top: 3em;
-    width: 100%;
+    padding: 3em 0;
+    width: 85%;
     margin: auto;
     border-bottom: solid .1em #f1f1f186;
 }
-.about-me-text {
-    width: 80%;
-    margin: auto;
-}   
+
 .about-me-text > p {
     padding-top: 2em;
+    font-size: 1.3em;
+    text-align: center;
 }
 .about-me-text > h1 {
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
 }
 /* about me list style */
 .info-list {
@@ -232,7 +238,7 @@ button:hover{
     list-style: none;
     line-height: 2em;
     font-weight: bold;
-    font-size: .9em;
+    font-size: 1.3em;
 }
 .info-item > span{
     color: var(--dark-mod-seconder-text-color);
@@ -259,26 +265,31 @@ button:hover{
 /* Resume "experiences" style */
 .resume{
     width: 90%;
-    margin:  0 auto;
+    margin:  auto;
     padding: 1em 0;
 }
 .main-title{
     text-align: center;
 }
+.main-title > h1{
+    font-size: 2em;
+    padding-top: .5em;
+    font-family: 'Courier New', Courier, monospace;
+}
 .main-title > h3{
-    font-size: 1em;
+    font-size: 1.3em;
     color: var(--dark-mod-seconder-text-color);
     padding-top: .5em;
 }
 
 /* job-education slider style */
 .slid-container{
-    width: 100%;
-    margin:  0 1em;
+    width: 90%;
+    margin:  auto;
     border-bottom: solid 1px var(--light-mode-background-color);
 }
 .carousel{
-    height: 300px;
+    height: 400px;
     overflow: hidden;
     position: relative;
 }
@@ -286,7 +297,7 @@ button:hover{
     display: flex;
     height: 100%;
     width: 400%;
-    transition: all .3s;
+    transition: all 2s;
 }
 .slider-2 section {
     flex-basis: 100%;
@@ -298,7 +309,7 @@ button:hover{
 /* job-education slider buttons */
 .left, .right {
     position: absolute;
-    top: 60%;
+    top: 70%;
     transform: translate(-50%);
     cursor: pointer;
     display: flex;
@@ -309,72 +320,68 @@ button:hover{
     border-radius: 50%;
 
 }
+
 .experiences-control > i{
+    margin-top: .5em;
     font-size: 3em;
     -webkit-user-select: none;
     color: var(--light-mode-text-color);
     background-color: var(--light-mode-background-color);
 }
 .left {
-    left: 38%;
+    left: 40%;
 }
 .right{ 
-    right: 20%;
+    right: 30%;
 }
 
-/* job-education slider info */
+/* end for job-education slider info */
+
 
 .experience-info{
     padding: .2em ;
-    min-width: 45%;
+    min-width: 50%;
 }
-.experiences-text {
-    margin-left: 1em;
-}
-.experience-info > h1{
 
-}
 .experience-info > h1 span {
     color: var(--dark-mod-seconder-text-color);
 }
 
-
 .mh-skills-inner  {
     border-bottom: solid 1px var(--light-mode-background-color);
-    padding: 3em 0;
+    padding: 2em 0;
 }
+
 .mh-skills-2{
     border-bottom: solid 1px var(--light-mode-background-color);
-    padding: 3em 0;
+    padding: 2em 0;
 }
-.mh-skills .mh-professional-skills{
-    padding-right: 60px;
+
+.mh-skills .mh-professional-skills {
     margin-top: 2em;
 }
-.mh-skills .mh-professional-skills h3 {
-    font-size:30px;
-    line-height: 40px;
-    text-align: center;
-    font-weight: 400;
-    margin-bottom: 60px;
-}
-.mh-professional-skills{
-    padding-left: 20%;
 
-}
-.mh-professional-skills h3 {
-    font-size:30px;
+.mh-skills .mh-professional-skills h3 {
+    font-size: 2em;
     line-height: 40px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 90%;
+    margin: 0 auto 60px auto ;
+}
+
+.mh-professional-skills{
+    margin: auto;
+    width: 80%;
 }
 
 .mh-professional-progress li {
     display: inline-block;
     margin: 0 auto;
     float: none;
-    width: 48%;
+    width: 49%;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -388,7 +395,7 @@ button:hover{
 
 }
 .progress.progress-line {
-    height: 10px;
+    height: 5px;
     margin-right: 60px;
 }
 
@@ -415,7 +422,7 @@ button:hover{
 
 .candidates{
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     font-family: 'poppins', sans-serif;
 }
 .candidates .parcial{
@@ -424,37 +431,40 @@ button:hover{
     vertical-align: middle;
 }
 .candidates .parcial .info{
-    position: relative;
     font-family: 'poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
 }
 .candidates .parcial .info .name{
     font-size: 15px;
     font-weight: 600;
     opacity: .9;
     font-family: 'poppins', sans-serif;
+    min-height: 1em;
+    margin: 0;
+    padding: 0;
+    text-align: start;
 }
 .candidates .parcial .info .percentage-num{
     font-size: 15px;
     font-weight: normal;
-    float: right;
+    color: var(--dark-mod-seconder-text-color);
 }
 .candidates .parcial .progressBar {
     position: relative;
     width: 100%;
-    height: 7px;
+    height: 17px;
     margin: 20px 0 2px;
     border-radius: 10px;
     background-color:var(--light-mode-background-color);
 }
+
 .candidates .percentage {
     position: absolute;
     top: 0;
     left: 0;
-    height: 7px;
-    border-top-left-radius: 10px ;
-    border-bottom-left-radius: 10px ;
-    border-bottom-right-radius: 10px ;
-    border-bottom-right-radius: 10px ;
+    height: 17px;
+    border-radius: 10px;
     background-color: var(--dark-mod-seconder-text-color);
     -webkit-transition: 3s all;
     -webkit-animation-duration: 3s;
@@ -462,11 +472,70 @@ button:hover{
     font-family: 'poppins', sans-serif;
 } 
 
+.mh-languages-skill{
+    margin-top: 2em;
+    margin: auto;
+    border-bottom: solid 1px var(--light-mode-background-color);
+    padding-bottom: 2em;
+}
+.languages-container{
+    width: 80%;
+    margin: auto;
+}
+.mh-languages-skill h3 {
+    font-size: 2em;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 50%;
+    margin: 1em auto;
+}
+
 @keyframes animationProgress {
     from{ 
         width: 0;
     }
 }
+
+/* Portfolio swiper */
+#portfolio{
+    text-align: center;
+    border-bottom: solid 1px var(--light-mode-background-color);
+    padding-bottom: 2em;
+}
+.swiper-slide{
+    min-height: 500px;
+    padding: .5em;
+}
+.swiper-slide > img {
+    height: 300px;
+
+}
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    content: '';
+}
+.swiper-button-prev{
+    left: 15%;
+    top: 90%;
+
+}
+.swiper-button-next {
+    right: 15%;
+    top: 90%;
+}
+.swiper-portfolio-icon {
+    font-size: 4em;
+    color: var(--dark-mod-seconder-text-color);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal
+ {
+ }
+
+
 @media screen and (max-width: 320px) {
     .slider, .slider > img{
         width: 100%;

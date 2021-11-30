@@ -5,20 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hazem Kawas CV</title>
+    <!-- Swiper CSS and js -->
+    <link rel="stylesheet" href="style/swiper-bundle.min.css" />
+    <script  src="js/swiper-bundle.min.js"></script>
+    <!--  -->
+    <script defer src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script defer src="js/circle-progress.js"></script>
+    <!--  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--  -->
     <!-- Google fonts links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Estonia&display=swap" rel="stylesheet">
     <!-- fontAwesome icons links    -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <!-- Style sheet links -->
-    <link rel="stylesheet" href="style-mobile.css">
-    <link rel="stylesheet" href="style-tablet.css">
-    <link rel="stylesheet" href="style-larg.css">
+    <link rel="stylesheet" href="style/style-mobile.css">
+    <link rel="stylesheet" href="style/style-tablet.css">
+    <link rel="stylesheet" href="style/style-larg.css">
     <!-- js link -->
-    <script defer src="./main.js"></script>
+    <script defer src="JS/main.js"></script>
+    <title>Hazem Kawas CV</title>
 </head>
 
 <body>
@@ -38,7 +49,7 @@
                 <a class="nav-item" href="#PORTFOLIO">PORTFOLIO</a>
                 <a class="nav-item" href="#CONTACTS">CONTACTS</a>
                 <a class="nav-item" href="#BLOG">BLOG</a>
-                <button type="button" class="nav-item btn btn-primary">DOWNLOAD CV</button>
+                <button type="button" class="nav-item-btn ">DOWNLOAD CV</button>
             </ul>
         </div>
     </header>
@@ -48,7 +59,7 @@
             <img src="./img/218123511_1385968738470014_6438525034531108143_n.jpg" alt="">
             <img src="./img/IMG_20190906_155858.jpg" alt="">
         </div>
-        <section id="ABOUT" class="main">
+        <div id="ABOUT" class="main">
             <div class="name">
                 <h1>Hazem <br> Kawas</h1>
             </div>
@@ -61,11 +72,11 @@
                     <p>Hello! I am a Web Developer Student, from sweden, Gutenberg.</p>
                 </div>
                 <div class="buttons">
-                    <a href="#home"><button type="button" class="nav-item btn btn-primary">CONTACT ME</button></a>
+                    <a href="#home"><button type="button" class="nav-item-btn">CONTACT ME</button></a>
                     <a href="#RESUME"> <i class="far fa-caret-square-down"></i></a>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
     <section class="about-me">
         <div class="about-me-text">
@@ -156,7 +167,7 @@
             </div>
         </div>
     </div>
-    <section id="">
+    <section id="RESUME">
         <div class="experiences resume">
             <div class="main-title">
                 <h1 class="title">Education</h1>
@@ -166,7 +177,7 @@
     </section>
     <div class="slid-container">
         <div class="carousel">
-            <div class="slider-2" id="">
+            <div class="slider-2">
                 <section> section one</section>
                 <section> section tow</section>
                 <section> section three</section>
@@ -208,7 +219,8 @@
                                         <div class="percentage-num">70%</div>
                                     </div>
                                     <div class="progressBar">
-                                        <div class="percentage" style="width:70%;"></div></div>
+                                        <div class="percentage" style="width:70%;"></div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -218,8 +230,9 @@
                                         <div class="name">CSS</div>
                                         <div class="percentage-num">60%</div>
                                     </div>
-                                    <div class="progressBar" >
-                                        <div class="percentage" style="width:60%;"></div></div>
+                                    <div class="progressBar">
+                                        <div class="percentage" style="width:60%;"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -228,7 +241,6 @@
             </div>
         </div>
         </div>
-
         <div class="col-sm-12 col-md-6 mh-skills-2">
             <div class="mh-professional-skills">
                 <h3>professional skills</h3>
@@ -249,15 +261,106 @@
             </div>
         </div>
 
+        <div class="mh-languages-skill">
+            <h3>professional skills</h3>
+            <div class="languages-container">
+                <div class="language">
+                    <div class="info">
+                        <h4>Arabic</h4>
+                        <p>Native</p>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                        </div>
+                    </div>
+                    <div class="language">
+                        <div class="">
+                            <h4>English</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, odio!</p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:80%;">
+                            </div>
+                        </div>
+                        <div class="language">
+                            <div class="">
+                                <h4>Swedish</h4>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, odio!</p>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+                                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-
-
-        </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="circle-progress.js"></script>
+
+    <!-- Portfolio -->
+    <section class="portfolio " id="portfolio">
+        <h2 class="section-title">Portfolio</h2>
+        <h3 class="section-title"> Most recent work</h3>
+        <div class="portfolio-container  swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Portfolio 1 -->
+                <div class="portfolio-content swiper-slide">
+                    <img src="./img/1213.jpg" alt="" class="portfolio-image">
+                    <div class="portfolio-data">
+                        <div class="portfolio-title">Modern Website</div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, laudantium?</p>
+                        <a href="#" class="button button--flex button--small portfolio">
+                            <button type="button" class="nav-item-btn">Demo <i class="fas fa-angle-right"></i></button>
+
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Portfolio 2 -->
+                <div class="portfolio-content swiper-slide">
+                    <img src="" alt="" class="portfolio-image">
+                    <div class="portfolio-data">
+                        <div class="portfolio-title">Modern Website</div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, laudantium?</p>
+                        <a href="#" class="button button--flex button--small portfolio">
+                            <button type="button" class="nav-item-btn">Demo <i class="fas fa-angle-right"></i></button>
+
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Portfolio 3 -->
+                <div class="portfolio-content swiper-slide">
+                    <img src="" alt="" class="portfolio-image">
+                    <div class="portfolio-data">
+                        <div class="portfolio-title">Modern Website</div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, laudantium?</p>
+                        <a href="#" class="button button--flex button--small portfolio">
+                            <button type="button" class="nav-item-btn">Demo <i class="fas fa-angle-right"></i></button>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+                <!-- add Arrows -->
+               <div class="swiper-button-next">
+                 <i class="fas fa-angle-right swiper-portfolio-icon"></i>
+               </div>
+               <div class="swiper-button-prev">
+                <i class="fas fa-angle-left  swiper-portfolio-icon"></i>
+               </div>
+
+               <!-- Add pagination -->
+               <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
 </body>
 
 </html>

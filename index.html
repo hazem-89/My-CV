@@ -5,36 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Swiper CSS and js -->
+    <!--==================================== Swiper CSS and js links   ====================================-->
     <link rel="stylesheet" href="swiper-bundle.min.css" />
-    <script  src="swiper-bundle.min.js"></script>
-    <!--  -->
+    <script src="swiper-bundle.min.js"></script>
+    <!--==================================== progress circle links  ====================================-->
     <script defer src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script defer src="circle-progress.js"></script>
-    <!--  -->
+    <!--==================================== BootStrap " progressBar links "  ====================================-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <!--  -->
-    <!-- Google fonts links -->
+    <!--==================================== Google fonts links  ====================================-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Estonia&display=swap" rel="stylesheet">
-    <!-- fontAwesome icons links    -->
+    <!--==================================== fontAwesome icons links  ====================================-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <!-- Style sheet links -->
+    <!--==================================== Style sheet links  ====================================-->
     <link rel="stylesheet" href="style-mobile.css">
     <link rel="stylesheet" href="style-tablet.css">
     <link rel="stylesheet" href="style-larg.css">
-    <!-- js link -->
+    <!--==================================== js link  ====================================-->
     <script defer src="main.js"></script>
+
     <title>Hazem Kawas CV</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="nav-container">
+    <!--==================================== Header " Nav Bar "  ====================================-->
+    <header id="navbar" class="header">
+        <div id="nav-container" class="nav-container">
             <div class="mobile-menu">
                 <i id="icon" class="fas fa-chevron-circle-down"></i>
                 <div class="name-logo">
@@ -48,190 +49,203 @@
                 <a class="nav-item" href="#RESUME">RESUME</a>
                 <a class="nav-item" href="#PORTFOLIO">PORTFOLIO</a>
                 <a class="nav-item" href="#CONTACTS">CONTACTS</a>
-                <a class="nav-item" href="#BLOG">BLOG</a>
                 <button type="button" class="nav-item-btn ">DOWNLOAD CV</button>
             </ul>
         </div>
     </header>
+    <!--==================================== Main " contain the bag sections "  ====================================-->
     <main id="home">
-        <div class="slider">
-            <img src="./img/12131.png" alt="" class="show">
-            <img src="./img/218123511_1385968738470014_6438525034531108143_n.jpg" alt="">
-            <img src="./img/IMG_20190906_155858.jpg" alt="">
-        </div>
-        <div id="ABOUT" class="main">
-            <div class="name">
-                <h1>Hazem <br> Kawas</h1>
+        <!--==================================== Image slider + intro info  ====================================-->
+        <section class="intro-container">
+            <!--==================================== Image slider  ====================================-->
+            <div class="slider">
+                <img src="./img/12131.png" alt="" class="show">
+                <img src="./img/218123511_1385968738470014_6438525034531108143_n.jpg" alt="">
+                <img src="./img/IMG_20190906_155858.jpg" alt="">
             </div>
-
-            <div class="intro">
-                <div class="typewriter-effect">
-                    <p id="text"></p>
+            <!--==================================== intro info  ====================================-->
+            <div id="ABOUT" class="main">
+                <div class="name">
+                    <h1>Hazem <br> Kawas</h1>
                 </div>
-                <div class="intro-text">
-                    <p>Hello! I am a Web Developer Student, from sweden, Gutenberg.</p>
-                </div>
-                <div class="buttons">
-                    <a href="#home"><button type="button" class="nav-item-btn">CONTACT ME</button></a>
-                    <a href="#RESUME"> <i class="far fa-caret-square-down"></i></a>
-                </div>
-            </div>
-        </div>
-    </main>
-    <section class="about-me">
-        <div class="about-me-text">
-            <h1>About Me</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur laborum amet aut accusantium eum
-                suscipit
-                ex maxime quis qui tempora porro sequi doloribus, voluptatum dolorum commodi. Recusandae blanditiis quos
-                nulla dolorem ea dolores ipsum, obcaecati ipsam minima culpa possimus saepe sapiente ut corrupti beatae
-                vel,
-                tempora distinctio aperiam accusantium quo.</p>
-            <div class="info">
-                <ul class="info-list">
-                    <li class="info-item"> <span>AGE:</span> <span class="column-2"> 32</span> </li>
-                    <li class="info-item"> <span>RESIDENCE:</span> <span class="column-2"> sweden</span> </li>
-                    <li class="info-item"> <span>FREELANCE:</span><span class="column-2"> Yes</span> </li>
-                    <li class="info-item"> <span>ADDRESS:</span> <span class="column-2"> Gutenberg</span> </li>
-                    <li class="info-item"> <span>PHONE:</span><span class="column-2"> +46 706 211 404</span> </li>
-                    <li class="info-item"> <span>E-MAIL:</span> <span class="column-2"> hazem.k.4488@gmail.com </span>
-                    </li>
-                </ul>
-            </div>
-            <div class="contact-icon">
-                <i class="fab fa-github-square"></i>
-                <i class="fab fa-linkedin"></i>
-            </div>
-        </div>
-    </section>
 
-    <section id="RESUME">
-        <div class="experiences resume">
-            <div class="main-title">
-                <h1 class="title">Experience</h1>
-                <h3 class="second-title">Working with</h3>
+                <div class="intro">
+                    <div class="typewriter-effect">
+                        <p id="text"></p>
+                    </div>
+                    <div class="intro-text">
+                        <p>Hello! I am a Web Developer Student, from sweden, Gutenberg.</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="#home"><button type="button" class="nav-item-btn">CONTACT ME</button></a>
+                        <a href="#RESUME"> <i class="far fa-caret-square-down"></i></a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-    <div class="slid-container">
-        <div class="carousel">
-            <div class="slider-2">
-                <section>
-                    <div class="experience-info">
-                        <p>2015-2016</p>
-                        <h1> <span>job</span> + company name</h1>
-                        <h1>place</h1>
-                    </div>
-                    <div class="experiences-text">
-                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
-                            libero odit molestias nulla et vel asperiores temporibus facilis odio porro. </p>
-                    </div>
-                </section>
-                <section>
-                    <div class="experience-info">
-                        <p>2015-2016</p>
-                        <h1> <span>job</span> + company name</h1>
-                        <h1>place</h1>
-                    </div>
-                    <div class="experiences-text">
-                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
-                            libero odit molestias nulla et vel asperiores temporibus facilis odio porro. </p>
-                    </div>
-                </section>
-                <section>
-                    <div class="experience-info">
-                        <p>2015-2016</p>
-                        <h1> <span>job</span> + company name</h1>
-                        <h1>place</h1>
-                    </div>
-                    <div class="experiences-text">
-                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
-                            libero odit molestias nulla et vel asperiores temporibus facilis odio porro. </p>
-                    </div>
-                </section>
-                <section>
-                    <div class="experience-info">
-                        <p>2015-2016</p>
-                        <h1> <span>job</span> + company name</h1>
-                        <h1>place</h1>
-                    </div>
-                    <div class="experiences-text">
-                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
-                            libero odit molestias nulla et vel asperiores temporibus facilis odio porro. </p>
-                    </div>
-                </section>
+            <!--  -->
+        </section>
+        <!--==================================== About me info  ====================================-->
+        <section class="about-me">
+            <!--==================================== About me info-text  ====================================-->
+            <div class="about-me-text">
+                <h1>About Me</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur laborum amet aut accusantium eum
+                    suscipit
+                    ex maxime quis qui tempora porro sequi doloribus, voluptatum dolorum commodi. Recusandae blanditiis
+                    quos
+                    nulla dolorem ea dolores ipsum, obcaecati ipsam minima culpa possimus saepe sapiente ut corrupti
+                    beatae
+                    vel,
+                    tempora distinctio aperiam accusantium quo.</p>
+                <!--==================================== About me info-list  ====================================-->
+                <div class="info">
+                    <ul class="info-list">
+                        <li class="info-item"> <span>AGE:</span> <span class="column-2"> 32</span> </li>
+                        <li class="info-item"> <span>RESIDENCE:</span> <span class="column-2"> sweden</span> </li>
+                        <li class="info-item"> <span>FREELANCE:</span><span class="column-2"> Yes</span> </li>
+                        <li class="info-item"> <span>ADDRESS:</span> <span class="column-2"> Gutenberg</span> </li>
+                        <li class="info-item"> <span>PHONE:</span><span class="column-2"> +46 706 211 404</span> </li>
+                        <li class="info-item"> <span>E-MAIL:</span> <span class="column-2"> hazem.k.4488@gmail.com
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <!--==================================== contact-me icons  ====================================-->
+                <div class="contact-icon">
+                    <i class="fab fa-github-square"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
             </div>
-            <div class="experiences-control">
-                <i class="fas left fa-chevron-circle-left"></i>
-                <i class="fas right fa-chevron-circle-right"></i>
+        </section>
+        <!--==================================== Resume  " work section " ====================================-->
+        <section class="work" id="RESUME">
+            <div class="experiences resume">
+                <div class="main-title">
+                    <h1 class="title">Experience</h1>
+                    <h3 class="second-title">Working with</h3>
+                </div>
             </div>
-        </div>
-    </div>
-    <section id="RESUME">
-        <div class="experiences resume">
-            <div class="main-title">
-                <h1 class="title">Education</h1>
-                <h3 class="second-title">STUDIED AT</h3>
+            <div class="slid-container">
+                <div class="carousel">
+                    <div class="slider-2">
+                        <section>
+                            <div class="experience-info">
+                                <p>2015-2016</p>
+                                <h1> <span>job</span> + company name</h1>
+                                <h1>place</h1>
+                            </div>
+                            <div class="experiences-text">
+                                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+                                    libero odit molestias nulla et vel asperiores temporibus facilis odio porro. </p>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="experience-info">
+                                <p>2015-2016</p>
+                                <h1> <span>job</span> + company name</h1>
+                                <h1>place</h1>
+                            </div>
+                            <div class="experiences-text">
+                                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+                                    libero odit molestias nulla et vel asperiores temporibus facilis odio porro. </p>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="experience-info">
+                                <p>2015-2016</p>
+                                <h1> <span>job</span> + company name</h1>
+                                <h1>place</h1>
+                            </div>
+                            <div class="experiences-text">
+                                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+                                    libero odit molestias nulla et vel asperiores temporibus facilis odio porro. </p>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="experience-info">
+                                <p>2015-2016</p>
+                                <h1> <span>job</span> + company name</h1>
+                                <h1>place</h1>
+                            </div>
+                            <div class="experiences-text">
+                                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+                                    libero odit molestias nulla et vel asperiores temporibus facilis odio porro. </p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="experiences-control">
+                        <i class="fas left fa-chevron-circle-left"></i>
+                        <i class="fas right fa-chevron-circle-right"></i>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-    <div class="slid-container">
-        <div class="carousel">
-            <div class="slider-2">
-                <section> section one</section>
-                <section> section tow</section>
-                <section> section three</section>
-                <section> section four</section>
+        </section>
+        <!--==================================== Resume  " education section "  ====================================-->
+        <section class="education" id="RESUME">
+            <div class="experiences resume">
+                <div class="main-title">
+                    <h1 class="title">Education</h1>
+                    <h3 class="second-title">STUDIED AT</h3>
+                </div>
             </div>
-            <div class="experiences-control">
-                <i class="fas left fa-chevron-circle-left"></i>
-                <i class="fas right fa-chevron-circle-right"></i>
+            <div class="slid-container">
+                <div class="carousel">
+                    <div class="slider-2">
+                        <section> section one</section>
+                        <section> section tow</section>
+                        <section> section three</section>
+                        <section> section four</section>
+                    </div>
+                    <div class="experiences-control">
+                        <i class="fas left fa-chevron-circle-left"></i>
+                        <i class="fas right fa-chevron-circle-right"></i>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+        <!--==================================== skills section ====================================-->
+        <section class="mh-skills" id="mh-skills">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="mh-skills-inner">
+                            <div class="mh-professional-skills">
+                                <h3>technical skills</h3>
+                                <div class="each-skills">
+                                    <div class="candidates">
+                                        <div class="parcial">
+                                            <div class="info">
+                                                <div class="name">Javascript</div>
+                                                <div class="percentage-num">50%</div>
+                                            </div>
+                                            <div class="progressBar">
+                                                <div class="percentage" style="width:50%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-    <!-- skills coding languages -->
-    <section class="mh-skills" id="mh-skills">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <div class="mh-skills-inner">
-                        <div class="mh-professional-skills">
-                            <h3>technical skills</h3>
-                            <div class="each-skills">
                                 <div class="candidates">
                                     <div class="parcial">
                                         <div class="info">
-                                            <div class="name">Javascript</div>
-                                            <div class="percentage-num">50%</div>
+                                            <div class="name">HTML</div>
+                                            <div class="percentage-num">70%</div>
                                         </div>
                                         <div class="progressBar">
-                                            <div class="percentage" style="width:50%;"></div>
+                                            <div class="percentage" style="width:70%;"></div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="candidates">
-                                <div class="parcial">
-                                    <div class="info">
-                                        <div class="name">HTML</div>
-                                        <div class="percentage-num">70%</div>
-                                    </div>
-                                    <div class="progressBar">
-                                        <div class="percentage" style="width:70%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="candidates">
-                                <div class="parcial">
-                                    <div class="info">
-                                        <div class="name">CSS</div>
-                                        <div class="percentage-num">60%</div>
-                                    </div>
-                                    <div class="progressBar">
-                                        <div class="percentage" style="width:60%;"></div>
+                                <div class="candidates">
+                                    <div class="parcial">
+                                        <div class="info">
+                                            <div class="name">CSS</div>
+                                            <div class="percentage-num">60%</div>
+                                        </div>
+                                        <div class="progressBar">
+                                            <div class="percentage" style="width:60%;"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -239,128 +253,198 @@
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
-        <div class="col-sm-12 col-md-6 mh-skills-2">
-            <div class="mh-professional-skills">
-                <h3>professional skills</h3>
-                <ul class="mh-professional-progress">
-                    <li>
-                        <div class="mh-progress mh-progress-circle" data-progress="95"></div>
-                        <div class="pr-skill-name">communication</div>
-                    </li>
-                    <li>
-                        <div class="mh-progress mh-progress-circle" data-progress="50"></div>
-                        <div class="pr-skill-name">Team Work</div>
-                    </li>
-                    <li>
-                        <div class="mh-progress mh-progress-circle" data-progress="40"></div>
-                        <div class="pr-skill-name">project</div>
-                    </li>
-                </ul>
             </div>
-        </div>
+            <div class="col-sm-12 col-md-6 mh-skills-2">
+                <div class="mh-professional-skills">
+                    <h3>professional skills</h3>
+                    <ul class="mh-professional-progress">
+                        <li>
+                            <div class="mh-progress mh-progress-circle" data-progress="95"></div>
+                            <div class="pr-skill-name">communication</div>
+                        </li>
+                        <li>
+                            <div class="mh-progress mh-progress-circle" data-progress="50"></div>
+                            <div class="pr-skill-name">Team Work</div>
+                        </li>
+                        <li>
+                            <div class="mh-progress mh-progress-circle" data-progress="40"></div>
+                            <div class="pr-skill-name">project</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="mh-languages-skill">
-            <h3>professional skills</h3>
-            <div class="languages-container">
-                <div class="language">
-                    <div class="info">
-                        <h4>Arabic</h4>
-                        <p>Native</p>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
-                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:100%">
-                        </div>
-                    </div>
+            <div class="mh-languages-skill">
+                <h3>professional skills</h3>
+                <div class="languages-container">
                     <div class="language">
-                        <div class="">
-                            <h4>English</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, odio!</p>
+                        <div class="info">
+                            <h4>Arabic</h4>
+                            <p>Native</p>
                         </div>
                         <div class="progress">
                             <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
-                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:80%;">
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:100%">
                             </div>
                         </div>
                         <div class="language">
                             <div class="">
-                                <h4>Swedish</h4>
+                                <h4>English</h4>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, odio!</p>
                             </div>
                             <div class="progress">
                                 <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
-                                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:80%;">
+                                </div>
+                            </div>
+                            <div class="language">
+                                <div class="">
+                                    <h4>Swedish</h4>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, odio!</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Portfolio -->
-    <section class="portfolio " id="portfolio">
-        <h2 class="section-title">Portfolio</h2>
-        <h3 class="section-title"> Most recent work</h3>
-        <div class="portfolio-container  swiper mySwiper">
-            <div class="swiper-wrapper">
-                <!-- Portfolio 1 -->
-                <div class="portfolio-content swiper-slide">
-                    <img src="./img/1213.jpg" alt="" class="portfolio-image">
-                    <div class="portfolio-data">
-                        <div class="portfolio-title">Modern Website</div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, laudantium?</p>
-                        <a href="#" class="button button--flex button--small portfolio">
-                            <button type="button" class="nav-item-btn">Demo <i class="fas fa-angle-right"></i></button>
-
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Portfolio 2 -->
-                <div class="portfolio-content swiper-slide">
-                    <img src="" alt="" class="portfolio-image">
-                    <div class="portfolio-data">
-                        <div class="portfolio-title">Modern Website</div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, laudantium?</p>
-                        <a href="#" class="button button--flex button--small portfolio">
-                            <button type="button" class="nav-item-btn">Demo <i class="fas fa-angle-right"></i></button>
-
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Portfolio 3 -->
-                <div class="portfolio-content swiper-slide">
-                    <img src="" alt="" class="portfolio-image">
-                    <div class="portfolio-data">
-                        <div class="portfolio-title">Modern Website</div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, laudantium?</p>
-                        <a href="#" class="button button--flex button--small portfolio">
-                            <button type="button" class="nav-item-btn">Demo <i class="fas fa-angle-right"></i></button>
-
-                        </a>
                     </div>
                 </div>
             </div>
+        </section>
+        <!--==================================== Portfolio   ====================================-->
+        <section class="portfolio " id="portfolio">
+            <h2 class="section-title">Portfolio</h2>
+            <h3 class="section-title"> Most recent work</h3>
+            <div class="portfolio-container  swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Portfolio 1 -->
+                    <div class="portfolio-content swiper-slide">
+                        <img src="./img/1213.jpg" alt="" class="portfolio-image">
+                        <div class="portfolio-data">
+                            <div class="portfolio-title">Modern Website</div>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, laudantium?</p>
+                            <a href="#" class="button button--flex button--small portfolio">
+                                <button type="button" class="nav-item-btn">Demo <i
+                                        class="fas fa-angle-right"></i></button>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio 2 -->
+                    <div class="portfolio-content swiper-slide">
+                        <img src="" alt="" class="portfolio-image">
+                        <div class="portfolio-data">
+                            <div class="portfolio-title">Modern Website</div>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, laudantium?</p>
+                            <a href="#" class="button button--flex button--small portfolio">
+                                <button type="button" class="nav-item-btn">Demo <i
+                                        class="fas fa-angle-right"></i></button>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio 3 -->
+                    <div class="portfolio-content swiper-slide">
+                        <img src="" alt="" class="portfolio-image">
+                        <div class="portfolio-data">
+                            <div class="portfolio-title">Modern Website</div>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, laudantium?</p>
+                            <a href="#" class="button button--flex button--small portfolio">
+                                <button type="button" class="nav-item-btn">Demo <i
+                                        class="fas fa-angle-right"></i></button>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <!-- add Arrows -->
-               <div class="swiper-button-next">
-                 <i class="fas fa-angle-right swiper-portfolio-icon"></i>
-               </div>
-               <div class="swiper-button-prev">
-                <i class="fas fa-angle-left  swiper-portfolio-icon"></i>
-               </div>
+                <div class="swiper-button-next">
+                    <i class="fas fa-angle-right swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="fas fa-angle-left  swiper-portfolio-icon"></i>
+                </div>
 
-               <!-- Add pagination -->
-               <div class="swiper-pagination"></div>
+                <!-- Add pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <!--==================================== Contact-ME section ====================================-->
+        <section id="contat-form">
+            <div class="form-container">
+                <!-- <img src="img/img/shape.png" class="square" alt="" /> -->
+                <div class="form">
+                    <div class="contact-info">
+                        <h3 class="title">Let's get in touch</h3>
+                        <div class="info">
+                            <div class="information">
+                                <img src="img/img/location.png" class="icon" alt="" />
+                                <p> Göteborg Sweden  kungsbackvängen 131</p>
+                            </div>
+                            <div class="information">
+                                <img src="img/img/email.png" class="icon" alt="" />
+                                <p>Hazem.k.4488@gmail.com</p>
+                            </div>
+                            <div class="information">
+                                <img src="img/img/phone.png" class="icon" alt="" />
+                                <p>+46 706 211 404</p>
+                            </div>
+                        </div>
+                            <div class="contact-icon">
+                                <i class="fab fa-github-square"></i>
+                                <i class="fab fa-linkedin"></i>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <span class="circle one"></span>
+                        <span class="circle two"></span>
+
+                        <form action="index.html" autocomplete="off">
+                            <h3 class="title">Contact Me</h3>
+                            <div class="input-container">
+                                <input type="text" name="name" class="input" />
+                                <label for="">name</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="email" name="email" class="input" />
+                                <label for="">Email</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="tel" name="phone" class="input" />
+                                <label for="Phone">Phone</label>
+                            </div>
+                            <div class="input-container textarea">
+                                <textarea name="message" class="input"></textarea>
+                                <label for="">Message</label>
+                            </div>
+                            <button type="submit" class="btn-form-button">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+      <!--==================================== Footer ====================================-->
+      <footer class="footer">
+          <div class="footer-container">
+         <h3 class="footer-title">Hazem Kawas</h3>
+         <span>Front-End Developer</span>
+         <ul class="footer-links">
+             <li><a class="nav-item" href="#home"><span class="home">HOME</span></a> </li>
+             <li><a class="nav-item" href="#ABOUT">ABOUT</a></li>
+             <li><a class="nav-item" href="#ABOUT">ABOUT</a></li>
+             <li><a class="nav-item" href="#RESUME">RESUME</a></li>
+             <li><a class="nav-item" href="#PORTFOLIO">PORTFOLIO</a></li>
+             <li><a class="nav-item" href="#RESUME">RESUME</a></li>    
+         </ul>
         </div>
-    </section>
-
+      </footer>
 </body>
 
 </html>

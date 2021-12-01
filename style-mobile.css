@@ -6,22 +6,29 @@
 
 /* roots for styling  */
 :root {
-    --header-height: 7rem;
+    --header-height: 8rem;
     --dark-mode-text-color: #f1f1f1;
     --dark-mode-background-color: rgb(38, 38, 41);
     --light-mode-text-color: rgb(38, 38, 41);
     --light-mode-background-color: #f1f1f1;
     --dark-mod-seconder-text-color: rgb(11, 255, 255);
+    --border : solid 1px var(--light-mode-background-color);
 
 }
 body{
     background-color: var(--dark-mode-background-color);
     color: var(--dark-mode-text-color);
-    height: 5000px;
 }
 a{
     text-decoration: none;
+    color: var(--dark-mode-text-color);
+
 }
+li { 
+    list-style: none;
+    color: var(--dark-mode-text-color);
+}
+
 /* General buttons styling */
 button  { 
     height: 50px;
@@ -47,7 +54,7 @@ button  {
     height: var(--header-height);
     backdrop-filter: blur(.3em);
 }
-.active .header {
+.active header {
     background: var(--dark-mode-background-color);
     backdrop-filter: blur(0em);
 
@@ -96,9 +103,9 @@ button:hover{
 .mobile-menu .name-logo > h5 {
     color: var(--dark-mode-text-color);
     margin-right: 1em;
-    font-family: 'Estonia', cursive;    
+    font-family: 'Courier New', Courier, monospace;    
     font-weight: bolder;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bolder;
     line-height: 0.6em;
 }
@@ -169,7 +176,7 @@ button:hover{
     width: 100%;
     margin: auto;
     height: 400px;
-    border-bottom: solid .1em #f1f1f186;
+    border-bottom: var(--border);
     margin-top: 30em;
 }
 .name {
@@ -217,15 +224,16 @@ button:hover{
 /* styling for About-me styling  */
 .about-me {
     padding: 3em 0;
-    width: 85%;
     margin: auto;
-    border-bottom: solid .1em #f1f1f186;
+    border-bottom: var(--border);
 }
-
+.about-me-text {
+    width: 90%;
+    margin: 0 auto;
+}
 .about-me-text > p {
     padding-top: 2em;
     font-size: 1.3em;
-    text-align: center;
 }
 .about-me-text > h1 {
     text-align: center;
@@ -286,7 +294,7 @@ button:hover{
 .slid-container{
     width: 90%;
     margin:  auto;
-    border-bottom: solid 1px var(--light-mode-background-color);
+    border-bottom: var(--border);
 }
 .carousel{
     height: 400px;
@@ -316,7 +324,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     justify-items: center;
-    border: solid 2px var(--light-mode-background-color);
+    border: var(--border);
     border-radius: 50%;
 
 }
@@ -328,10 +336,10 @@ button:hover{
     color: var(--light-mode-text-color);
     background-color: var(--light-mode-background-color);
 }
-.left {
+.experiences-control .left {
     left: 40%;
 }
-.right{ 
+.experiences-control .right{ 
     right: 30%;
 }
 
@@ -348,12 +356,12 @@ button:hover{
 }
 
 .mh-skills-inner  {
-    border-bottom: solid 1px var(--light-mode-background-color);
+    border-bottom: var(--border);
     padding: 2em 0;
 }
 
 .mh-skills-2{
-    border-bottom: solid 1px var(--light-mode-background-color);
+    border-bottom: var(--border);
     padding: 2em 0;
 }
 
@@ -475,7 +483,7 @@ button:hover{
 .mh-languages-skill{
     margin-top: 2em;
     margin: auto;
-    border-bottom: solid 1px var(--light-mode-background-color);
+    border-bottom: var(--border);
     padding-bottom: 2em;
 }
 .languages-container{
@@ -502,7 +510,7 @@ button:hover{
 /* Portfolio swiper */
 #portfolio{
     text-align: center;
-    border-bottom: solid 1px var(--light-mode-background-color);
+    border-bottom: var(--border);
     padding-bottom: 2em;
 }
 .swiper-slide{
@@ -531,9 +539,184 @@ button:hover{
     color: var(--dark-mod-seconder-text-color);
 }
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal
- {
- }
+/* ====================================  Contact-ME section ==================================== */
+.form-container {
+    padding: 1.5em;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--dark-mode-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5em;
+}
+  
+.form{
+      width: 100%;
+      max-width: 820px;
+      box-shadow: 0 0 20px 1px rgba(248, 244, 244, 0.1);
+      display: grid;
+      grid-template-columns: 1fr;
+      border-radius: 1em;
+}
+
+.contact-form{
+      position: relative;
+}
+
+.information {
+    display: flex;
+    margin: 0.7rem 0;
+    align-items: center;
+}
+.contact-info .title{
+    font-size: 1em;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 50%;
+    margin: 1em auto;
+}
+.icon {
+    width: 30px;
+}
+.information > p {
+    padding-left: 1em;
+    text-align: center;
+    margin-top: 1.5em;
+    font-size: .8em;
+}
+.circle {
+    border-radius: 50%;
+    background: linear-gradient(135deg, transparent 20%, #144092);
+    position: absolute;
+  }
+  
+.circle.one {
+    width: 130px;
+    height: 130px;
+    top: 150px;
+    right: 0px;
+}
+  
+.circle.two {
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    right: 60px;
+}
+.contact-form:before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background: linear-gradient(130deg, transparent 40%, var(--dark-mod-seconder-text-color));
+    transform: rotate(45deg);
+    top: -13px;
+    left: initial;
+    right: 100px;
+}
+
+.input-container {
+    position: relative;
+    margin: 1em 0;
+}
+.input {
+    width: 100%;
+    outline: none;
+    border: var(--border);
+    background: none;
+    padding: 0.6rem 1.2rem;
+    color: var(--dark-mode-text-color);
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: .5s;
+    border-radius: 1em;
+}
+
+textarea.input {
+    padding: 0.8rem;
+    min-height: 150px;
+    resize: none;
+    overflow-y: auto;
+}
+
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    padding: 0 0.4rem;
+    color: var(--dark-mode-text-color);
+    font-size: 0.9rem;
+    font-weight: 400;
+    pointer-events: none;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+.input-container.textarea label {
+    top: 1rem;
+    transform: translateY(0);
+}
+
+.contact-info:before {
+    display: none;
+}
+
+form,
+.contact-info {
+    padding: 1.7rem 1.6rem;
+}
+
+.input-container.focus label {
+    top: -7px;
+    transform: translateY(-50%);
+    left: 5px;
+    font-size: 0.8rem;
+}
+/* ====================================  Footer ==================================== */
+footer{ 
+    width: 100%;
+    position: relative;
+    margin-top: 1em;
+    min-height: 200px;
+    padding: 1em;
+}
+
+.footer-container{
+    min-height: 200px;
+    text-align: center;
+    box-shadow: 0 0 10px 1px rgba(248, 244, 244, 0.1);
+    padding-top: 2em;
+    border-radius: 1em;
+}
+.footer-links{
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+    padding-top: 5em;
+    padding-bottom: 2em;
+}
+.footer-links > li{
+    padding: .5em;
+    font-family: 'Courier New', Courier, monospace;
+}
+.footer-title > h3 {
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+}
+.footer-title > span {
+    color: var(--dark-mod-seconder-text-color);
+    font-family: 'poppins';
+    padding-top: .3em;
+}
+
+
 
 
 @media screen and (max-width: 320px) {
@@ -558,4 +741,14 @@ button:hover{
         font-size: 25px;
         border-radius:  360px 360px 0 0;
     }
+    .experiences-control .left {
+        left: 43%;
+    }
+    .experiences-control .right{ 
+        right: 20%;
+    }
 }
+
+
+
+

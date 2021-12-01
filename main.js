@@ -18,6 +18,13 @@ function toggleMenu() {
         selectElement('header').classList.toggle('active');
     });
 }
+/** Remove mobile menu */
+function linkAction() {
+    const navMenu = document.getElementById('navbar');
+    navMenu.classList.remove('active');
+}
+const navLink = document.querySelectorAll('.nav-item');
+navLink.forEach(n => n.addEventListener('click', linkAction));
 
 /** Start the slider */
 function startSlider() {
@@ -142,3 +149,24 @@ let swiper = new Swiper(".portfolio-container", {
       clickable: true,
     }
   });
+
+//   Contact Form transform
+
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});

@@ -12,9 +12,9 @@
     <script defer src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script defer src="circle-progress.js"></script>
     <!--==================================== BootStrap " progressBar links "  ====================================-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
     <!--==================================== Google fonts links  ====================================-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,8 +39,7 @@
             <div class="mobile-menu">
                 <i id="icon" class="fas fa-chevron-circle-down"></i>
                 <div class="name-logo">
-                    <h5> Hazem </h5>
-                    <h5> <span>Kawas</span> </h5>
+                    <h5> Hazem  <br> <span>Kawas</span> </h5>
                 </div>
             </div>
             <ul class="nav-list">
@@ -86,6 +85,7 @@
         </section>
         <!--==================================== About me info  ====================================-->
         <section id="about" class="about-me">
+            <div class="about-me-container my-container">
             <!--==================================== About me info-text  ====================================-->
             <div class="about-me-text">
                 <h1>About Me</h1>
@@ -116,10 +116,13 @@
                     <i class="fab fa-linkedin"></i>
                 </div>
             </div>
+        </div>
         </section>
         <!--==================================== Resume  " work section " ====================================-->
-        <section class="work" id="RESUME">
-            <div class="experiences resume">
+        <section  id="RESUME">
+            <div class="resume-container my-container">
+            <div class="work">
+            <div class="experiences resume work">
                 <div class="main-title">
                     <h1 class="title">Experience</h1>
                     <h3 class="second-title">Working with</h3>
@@ -179,7 +182,8 @@
                     </div>
                 </div>
             </div>
-
+        </div>
+            <div class="education">
             <div class="experiences resume">
                 <div class="main-title">
                     <h1 class="title">Education</h1>
@@ -200,10 +204,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
         </section>
         <!--==================================== skills section ====================================-->
         <section class="mh-skills" id="mh-skills">
-            <div class="container">
+            <div class="container my-container">
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <div class="mh-skills-inner">
@@ -252,7 +258,7 @@
                 </div>
             </div>
             </div>
-            <div class="col-sm-12 col-md-6 mh-skills-2">
+            <div class="col-sm-12 col-md-6 mh-skills-2 my-container">
                 <div class="mh-professional-skills">
                     <h3>professional skills</h3>
                     <ul class="mh-professional-progress">
@@ -272,7 +278,7 @@
                 </div>
             </div>
 
-            <div class="mh-languages-skill">
+            <div class="mh-languages-skill my-container">
                 <h3>professional skills</h3>
                 <div class="languages-container">
                     <div class="language">
@@ -316,11 +322,11 @@
         <section class="portfolio " id="portfolio">
             <h2 class="section-title">Portfolio</h2>
             <h3 class="section-title"> Most recent work</h3>
-            <div class="portfolio-container  swiper mySwiper">
+            <div class="portfolio-container my-container swiper mySwiper">
                 <div class="swiper-wrapper">
                     <!-- Portfolio 1 -->
                     <div class="portfolio-content swiper-slide">
-                        <img src="./img/1213.jpg" alt="" class="portfolio-image">
+                        <img src="" alt="" class="portfolio-image">
                         <div class="portfolio-data">
                             <div class="portfolio-title">Modern Website</div>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, laudantium?</p>
@@ -376,7 +382,7 @@
         <section id="contat-form">
             <div class="form-container">
                 <!-- <img src="img/img/shape.png" class="square" alt="" /> -->
-                <div class="form">
+                <div class="form ">
                     <div class="contact-info">
                         <h3 class="title">Let's get in touch</h3>
                         <div class="info">
@@ -430,7 +436,7 @@
     </main>
     <!--==================================== Footer ====================================-->
     <footer class="footer">
-        <div class="footer-container">
+        <div class="footer-container my-container">
             <div class="footer-title">
                 <h3>Hazem Kawas</h3>
                 <span>Front-End Developer</span>

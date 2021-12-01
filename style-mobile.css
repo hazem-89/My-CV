@@ -6,13 +6,14 @@
 
 /* roots for styling  */
 :root {
-    --header-height: 8rem;
+    --header-height: 5rem;
     --dark-mode-text-color: #f1f1f1;
     --dark-mode-background-color: rgb(38, 38, 41);
     --light-mode-text-color: rgb(38, 38, 41);
     --light-mode-background-color: #f1f1f1;
     --dark-mod-seconder-text-color: rgb(11, 255, 255);
     --border : solid 1px var(--light-mode-background-color);
+    --box-shadow: 0 0 10px 1px rgba(248, 244, 244, 0.1);
 
 }
 body{
@@ -41,6 +42,7 @@ button  {
     transition: all 1s ease;
     border-radius: 5em;
 }
+
 
 /* header styles  */
 .header{
@@ -105,9 +107,9 @@ button:hover{
     margin-right: 1em;
     font-family: 'Courier New', Courier, monospace;    
     font-weight: bolder;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bolder;
-    line-height: 0.6em;
+    /* line-height: 0.6em; */
 }
 .mobile-menu .name-logo > h5 > span {
     padding-left: 1em;
@@ -511,15 +513,23 @@ button:hover{
 #portfolio{
     text-align: center;
     border-bottom: var(--border);
-    padding-bottom: 2em;
+    padding: 1em ;
+}
+.portfolio-container{
+    box-shadow: 0 0 10px 1px rgba(248, 244, 244, 0.1);
+    margin-top: 2em;
+    border-radius: 1em;
+
 }
 .swiper-slide{
-    min-height: 500px;
+    min-height: 550px;
     padding: .5em;
+}
+.portfolio-image{
+    min-height: 300px;
 }
 .swiper-slide > img {
     height: 300px;
-
 }
 .swiper-button-prev::after,
 .swiper-button-next::after{
@@ -538,7 +548,12 @@ button:hover{
     font-size: 4em;
     color: var(--dark-mod-seconder-text-color);
 }
-
+.portfolio-data{
+    margin-top:1em
+}
+.portfolio-data button{
+    margin-top: 1em;
+}
 /* ====================================  Contact-ME section ==================================== */
 .form-container {
     padding: 1.5em;
@@ -652,7 +667,7 @@ textarea.input {
     transform: translateY(-50%);
     padding: 0 0.4rem;
     color: var(--dark-mode-text-color);
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 400;
     pointer-events: none;
     z-index: 1000;
@@ -674,10 +689,11 @@ form,
 }
 
 .input-container.focus label {
-    top: -7px;
+    top: 0px;
     transform: translateY(-50%);
-    left: 5px;
-    font-size: 0.8rem;
+    left: 15px;
+    background: var(--dark-mode-background-color);
+    text-align: center;
 }
 /* ====================================  Footer ==================================== */
 footer{ 
@@ -726,11 +742,12 @@ footer{
     }
     .active .nav-list{
         visibility: visible;
-        height: 80vh;
+        height: 90vh;
         opacity: 1;
+        padding: 0;
     }
     .main{
-        margin-top: 25em;
+        margin-top: 27em;
     }
     .name{
         width: 70%;
@@ -740,6 +757,9 @@ footer{
         background-color:var(--dark-mode-background-color);
         font-size: 25px;
         border-radius:  360px 360px 0 0;
+    }
+    .slid-container .experience-info{
+        
     }
     .experiences-control .left {
         left: 43%;

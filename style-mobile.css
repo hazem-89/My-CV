@@ -6,9 +6,9 @@
 
 /* roots for styling  */
 :root {
-    --header-height: 5rem;
+    --header-height: 6rem;
     --dark-mode-text-color: #f1f1f1;
-    --dark-mode-background-color: rgb(38, 38, 41);
+    --dark-mode-background-color: rgba(38, 38, 41, 0.815);
     --light-mode-text-color: rgb(38, 38, 41);
     --light-mode-background-color: #f1f1f1;
     --dark-mod-seconder-text-color: rgb(11, 255, 255);
@@ -42,7 +42,15 @@ button  {
     transition: all 1s ease;
     border-radius: 5em;
 }
-
+.box-shadow{
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: var(--box-shadow);
+}
+.my-container{
+    padding: 0 1em;
+    margin-bottom: 1em;
+}
 
 /* header styles  */
 .header{
@@ -58,11 +66,12 @@ button  {
 }
 .active header {
     background: var(--dark-mode-background-color);
-    backdrop-filter: blur(0em);
-
 }
 .nav-container{
     height: var(--header-height);
+}
+.mobile-menu .nav-item-btn {
+    display: none;
 }
 /* nav list content Style */
 .nav-list{
@@ -109,7 +118,6 @@ button:hover{
     font-weight: bolder;
     font-size: 1.5em;
     font-weight: bolder;
-    /* line-height: 0.6em; */
 }
 .mobile-menu .name-logo > h5 > span {
     padding-left: 1em;
@@ -157,7 +165,7 @@ button:hover{
 /* slide-image style */
 .slider, .slider > img {
     width: 100%;
-    height: 75%;
+    height: 65%;
 }
 .slider > img {
     object-fit: cover;
@@ -172,24 +180,23 @@ button:hover{
 }
 
 /* main-intro styling */
-.main {
+.intro-info {
     text-align: center;
     font-size: 14px;
     width: 100%;
     margin: auto;
-    height: 400px;
-    border-bottom: var(--border);
-    margin-top: 30em;
+    margin-bottom: 3em;
+    margin-top: 29em;
 }
 .name {
     text-align: center;
     width: 60%;
     margin: auto;
     background-color:var(--dark-mode-background-color);
-    font-size:  3em;
+    font-size:  2em;
     border-radius:  360px 360px 0 0;
-    font-family: 'Estonia', cursive;    
-    padding-top: 1em;
+    font-family: 'Courier New', Courier, monospace;    
+    padding-top: 1.5em;
     line-height: 1em;
     min-height: 4em;
 }
@@ -213,7 +220,6 @@ button:hover{
     margin-top: 5em;
 }
 .intro button {
-  
     width: 200px;
     letter-spacing: 1px;
 }
@@ -225,17 +231,17 @@ button:hover{
 
 /* styling for About-me styling  */
 .about-me {
-    padding: 3em 0;
-    margin: auto;
-    border-bottom: var(--border);
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1em;
 }
 .about-me-text {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 .about-me-text > p {
     padding-top: 2em;
-    font-size: 1.3em;
+    font-size: 1em;
 }
 .about-me-text > h1 {
     text-align: center;
@@ -248,7 +254,7 @@ button:hover{
     list-style: none;
     line-height: 2em;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: .8em;
 }
 .info-item > span{
     color: var(--dark-mod-seconder-text-color);
@@ -273,11 +279,16 @@ button:hover{
 }
 
 /* Resume "experiences" style */
-.resume{
-    width: 90%;
+#resume{
+    width: 100%;
     margin:  auto;
-    padding: 1em 0;
+    margin-bottom: 1em;
 }
+.work,
+.education {
+    margin-bottom: 1em;
+}
+
 .main-title{
     text-align: center;
 }
@@ -294,12 +305,11 @@ button:hover{
 
 /* job-education slider style */
 .slid-container{
-    width: 90%;
+    width: 100%;
     margin:  auto;
-    border-bottom: var(--border);
 }
 .carousel{
-    height: 400px;
+    height: 300px;
     overflow: hidden;
     position: relative;
 }
@@ -311,9 +321,10 @@ button:hover{
 }
 .slider-2 section {
     flex-basis: 100%;
-    justify-content: center;
-    margin-top: 2em;
+    margin-top: 5em;
+    padding-left: 1em;
     display: flex;
+    flex-direction: column;
 }
 
 /* job-education slider buttons */
@@ -326,9 +337,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     justify-items: center;
-    border: var(--border);
     border-radius: 50%;
-
 }
 
 .experiences-control > i{
@@ -339,36 +348,25 @@ button:hover{
     background-color: var(--light-mode-background-color);
 }
 .experiences-control .left {
-    left: 40%;
+    left: 30%;
 }
 .experiences-control .right{ 
-    right: 30%;
+    right: 20%;
 }
 
-/* end for job-education slider info */
-
-
 .experience-info{
-    padding: .2em ;
-    min-width: 50%;
+    padding-bottom: 1em;
 }
 
 .experience-info > h1 span {
     color: var(--dark-mod-seconder-text-color);
 }
 
+
+
+/*  */
 .mh-skills-inner  {
-    border-bottom: var(--border);
-    padding: 2em 0;
-}
-
-.mh-skills-2{
-    border-bottom: var(--border);
-    padding: 2em 0;
-}
-
-.mh-skills .mh-professional-skills {
-    margin-top: 2em;
+    padding: 0;
 }
 
 .mh-skills .mh-professional-skills h3 {
@@ -384,7 +382,7 @@ button:hover{
 
 .mh-professional-skills{
     margin: auto;
-    width: 80%;
+    width: 100%;
 }
 
 .mh-professional-progress li {
@@ -485,8 +483,6 @@ button:hover{
 .mh-languages-skill{
     margin-top: 2em;
     margin: auto;
-    border-bottom: var(--border);
-    padding-bottom: 2em;
 }
 .languages-container{
     width: 80%;
@@ -510,56 +506,12 @@ button:hover{
 }
 
 /* Portfolio swiper */
-#portfolio{
-    text-align: center;
-    border-bottom: var(--border);
-    padding: 1em ;
-}
-.portfolio-container{
-    box-shadow: 0 0 10px 1px rgba(248, 244, 244, 0.1);
-    margin-top: 2em;
-    border-radius: 1em;
 
-}
-.swiper-slide{
-    min-height: 550px;
-    padding: .5em;
-}
-.portfolio-image{
-    min-height: 300px;
-}
-.swiper-slide > img {
-    height: 300px;
-}
-.swiper-button-prev::after,
-.swiper-button-next::after{
-    content: '';
-}
-.swiper-button-prev{
-    left: 15%;
-    top: 90%;
-
-}
-.swiper-button-next {
-    right: 15%;
-    top: 90%;
-}
-.swiper-portfolio-icon {
-    font-size: 4em;
-    color: var(--dark-mod-seconder-text-color);
-}
-.portfolio-data{
-    margin-top:1em
-}
-.portfolio-data button{
-    margin-top: 1em;
-}
 /* ====================================  Contact-ME section ==================================== */
 .form-container {
-    padding: 1.5em;
+    padding: 1em;
     position: relative;
     width: 100%;
-    min-height: 100vh;
     background-color: var(--dark-mode-background-color);
     display: flex;
     align-items: center;
@@ -601,7 +553,6 @@ button:hover{
 .information > p {
     padding-left: 1em;
     text-align: center;
-    margin-top: 1.5em;
     font-size: .8em;
 }
 .circle {
@@ -613,17 +564,20 @@ button:hover{
 .circle.one {
     width: 130px;
     height: 130px;
-    top: 150px;
-    right: 0px;
+    top: 190px;
+    right: 20px;
 }
   
 .circle.two {
     width: 80px;
     height: 80px;
-    top: 10px;
-    right: 60px;
+    top: 40px;
+    right: 210px;
 }
-.contact-form:before {
+.contact-info {
+    padding: 1.7rem 1.6rem;
+}
+/* .contact-form:before {
     content: "";
     position: absolute;
     width: 26px;
@@ -633,9 +587,9 @@ button:hover{
     top: -13px;
     left: initial;
     right: 100px;
-}
+} */
 
-.input-container {
+/* .input-container {
     position: relative;
     margin: 1em 0;
 }
@@ -652,14 +606,12 @@ button:hover{
     transition: .5s;
     border-radius: 1em;
 }
-
 textarea.input {
     padding: 0.8rem;
     min-height: 150px;
     resize: none;
     overflow-y: auto;
 }
-
 .input-container label {
     position: absolute;
     top: 50%;
@@ -673,33 +625,24 @@ textarea.input {
     z-index: 1000;
     transition: 0.5s;
 }
-
 .input-container.textarea label {
     top: 1rem;
     transform: translateY(0);
 }
-
 .contact-info:before {
     display: none;
-}
-
-form,
-.contact-info {
-    padding: 1.7rem 1.6rem;
-}
-
-.input-container.focus label {
+} 
+ .input-container.focus label {
     top: 0px;
     transform: translateY(-50%);
     left: 15px;
     background: var(--dark-mode-background-color);
     text-align: center;
-}
+} */
 /* ====================================  Footer ==================================== */
 footer{ 
     width: 100%;
     position: relative;
-    margin-top: 1em;
     min-height: 200px;
     padding: 1em;
 }
@@ -746,12 +689,11 @@ footer{
         opacity: 1;
         padding: 0;
     }
-    .main{
-        margin-top: 27em;
+    .intro-info{
+        margin-top: 26em;
     }
     .name{
         width: 70%;
-        padding-top: 1em;
         margin: 0 auto;
         height: auto;
         background-color:var(--dark-mode-background-color);
@@ -762,7 +704,7 @@ footer{
         
     }
     .experiences-control .left {
-        left: 43%;
+        left: 40%;
     }
     .experiences-control .right{ 
         right: 20%;

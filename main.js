@@ -18,7 +18,7 @@ function toggleMenu() {
         selectElement('header').classList.toggle('active');
     });
 }
-/** Remove mobile menu */
+/** Remove mobile menu after clicking on nav item */
 function linkAction() {
     const navMenu = document.getElementById('navbar');
     navMenu.classList.remove('active');
@@ -31,7 +31,7 @@ function startSlider() {
     setInterval(fadeToNextSlide, 6000)
 }
 
-/**  */
+/** fading to the next image */
 function fadeToNextSlide() {
     const images = document.querySelectorAll('.slider > img');
     const activeImage = images[activeImageIndex];
@@ -46,13 +46,11 @@ function fadeToNextSlide() {
     nextImage.classList.toggle('show');
 }
 
-// changing the background color of the nav
 
-const header = document.querySelector('header');
-const sectionOne = document.querySelector('.slider');
-
+/** Change the background color of the nav on scroll*/
 function changeNavBackgroundColor() {
-    
+    const header = document.querySelector('header');
+const sectionOne = document.querySelector('.slider');
 const sectionOneObserver = new IntersectionObserver(function(entries, sectionOneObserver){
     entries.forEach(entry => {
        if (!entry.isIntersecting) {
@@ -69,7 +67,6 @@ sectionOneObserver.observe(sectionOne)
 
 
 // typewriter effect
-
 const textDisplay = document.getElementById('text');
 const texts = ['Welcome to my cv.', 'i am a web developer', 'and i love coding.',];
 let i = 0;
@@ -78,6 +75,7 @@ let currentText = [];
 isDeleting = false;
 isEnd = false;
 
+/** cAdding a typewriter effect to the intro section  */
 function loopOverTexts() {
     isEnd = false;
     textDisplay.innerHTML = currentText.join('');
@@ -108,65 +106,36 @@ function loopOverTexts() {
             i = 0; 
         }
     }
-    
   }
     const speedUp = Math.random() * (80 -50) + 50;
-    const normalSpeed = Math.random() * (200 - 100) + 100;
-    const time = isEnd ? 1000 : isDeleting ? speedUp : normalSpeed
+    const normalSpeed = Math.random() * (100 - 50) + 50;
+    const time = isEnd ? 200 : isDeleting ? speedUp : normalSpeed
     setTimeout(loopOverTexts, time)
 }
 
-// slide between experience sections
-
-
-const slider = document.querySelector('.slider-2');
-const leftArrow = document.querySelector('.left');
-const rightArrow = document.querySelector('.right');
-let sectionsIndex = 0;
-
+/** sliding between job and education slides */
  function slideToNextJob() {
-leftArrow.addEventListener('click', function(){
+    const leftArrows = document.querySelectorAll('.left');
+    const rightArrows = document.querySelectorAll('.right');
+    let sectionsIndex = 0;
+    
+    for (const leftArrow of leftArrows) {
+    leftArrow.addEventListener('click', function(){
     sectionsIndex = (sectionsIndex > 0) ? sectionsIndex - 1 : 0;
-    slider.style.transform = 'translate(' + (sectionsIndex) * -25 + '%)'
+    leftArrow.parentElement.previousElementSibling.style.transform = 'translate(' + (sectionsIndex) * -25 + '%)'
 });
+    } 
 
+    for (const rightArrow of rightArrows){
 rightArrow.addEventListener('click', function(){
     sectionsIndex = (sectionsIndex < 3) ? sectionsIndex +1 : 3;
-    slider.style.transform = 'translate(' + (sectionsIndex) * -25 + '%)'
-});
+    rightArrow.parentElement.previousElementSibling.style.transform = 'translate(' + (sectionsIndex) * -25 + '%)'
+});}
  }
 
-// Portfolio Swiper 
-let swiper = new Swiper(".portfolio-container", {
-    cssMode: true,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    }
-  });
 
-//   Contact Form transform
 
-const inputs = document.querySelectorAll(".input");
 
-function focusFunc() {
-  let parent = this.parentNode;
-  parent.classList.add("focus");
-}
 
-function blurFunc() {
-  let parent = this.parentNode;
-  if (this.value == "") {
-    parent.classList.remove("focus");
-  }
-}
 
-inputs.forEach((input) => {
-  input.addEventListener("focus", focusFunc);
-  input.addEventListener("blur", blurFunc);
-});
+

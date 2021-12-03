@@ -53,7 +53,6 @@
         visibility: visible;
         opacity: 1;
         padding:  0.5em;
-        /* float: right; */
         backdrop-filter: blur(0.5em);
         border-radius: 1em;
         width: 40%;
@@ -103,7 +102,7 @@
         margin: 0;
         height: 400px;
         border-bottom: none;
-        margin-top: 20em;
+        margin-top: 18em;
         text-align: left;
     }
     .name {

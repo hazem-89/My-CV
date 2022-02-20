@@ -112,7 +112,7 @@
         font-size:  5em;
         border-radius: 360px;
         font-family: 'Estonia', cursive;
-        margin-left: 4.5em;
+        margin-left: 70%;
         padding-top: 1em;
     }
 
@@ -195,7 +195,7 @@
     /* <============================================================> style gor screen over 1280 px <============================================================> */
     @media screen and (min-width: 1280px){
         .name{
-            margin-left: 6em;
+            margin-left:80%;
         }
     }
 

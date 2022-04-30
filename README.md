@@ -1,3 +1,5 @@
-## Welcome to my online CV .. 
+## Welcome to my online CV ..
 
-[DEMO](https://hazem-89.github.io/My-CV/)
+[DEMO](https://hazem-kawas-cv.netlify.app/)
+
+Project by Hazem Kawas

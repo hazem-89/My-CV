@@ -82,6 +82,14 @@
         display: flex;
         justify-content: center;
     }
+    .back-dropFilter {
+        background-color: rgba(51, 166, 195, 0.22);
+        position: fixed;
+        top: 0; right: 0;  bottom: 0; 
+        height: 100vh;
+        z-index: 1;
+        width: 55%;
+    }
     .slider {
         position: fixed;
         top: 0; right: 0;  bottom: 0; 
@@ -104,6 +112,7 @@
         border-bottom: none;
         margin-top: 18em;
         text-align: left;
+        z-index: 999;
     }
     .name {
         width: 4em;
@@ -114,6 +123,7 @@
         font-family: 'Estonia', cursive;
         margin-left: 70%;
         padding-top: 1em;
+       
     }
 
     .intro{
